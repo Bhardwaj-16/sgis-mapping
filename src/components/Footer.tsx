@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Linkedin, Twitter } from 'lucide-react';
+import { FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -46,10 +46,10 @@ export default function Footer() {
         <p className="font-body text-sm text-on-surface-variant">© {new Date().getFullYear()} SGIS Mapping Services. All rights reserved.</p>
         <div className="flex gap-6">
           <a href="#" className="text-on-surface-variant hover:text-primary transition-colors">
-            <Linkedin className="w-5 h-5" />
+            <FaLinkedin className="w-5 h-5" />
           </a>
           <a href="#" className="text-on-surface-variant hover:text-primary transition-colors">
-            <Twitter className="w-5 h-5" />
+            <FaTwitter className="w-5 h-5" />
           </a>
         </div>
       </div>

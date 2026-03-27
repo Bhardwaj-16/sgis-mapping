@@ -22,7 +22,7 @@ export default function Hero() {
       <div className="relative z-10 flex h-full flex-col items-start justify-center px-8 max-w-7xl mx-auto w-full pointer-events-none">
         <div className="max-w-4xl pointer-events-auto">
           <span className="inline-block px-3 py-1 mb-6 text-[10px] font-label uppercase tracking-[0.3em] bg-primary/10 text-primary border border-primary/20 rounded-sm">
-            Expert Mapping <Solutions></Solutions>
+            Expert Mapping Solutions
           </span>
           <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tighter text-white mb-8">
             Your Vision, Our <br className="hidden md:block" />
