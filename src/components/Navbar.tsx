@@ -29,9 +29,9 @@ export default function Navbar() {
       {/* Top Bar */}
       <div className="h-10 bg-surface-container-lowest flex items-center justify-between px-4 md:px-8 border-b border-outline-variant/10">
         <div className="flex items-center gap-4 md:gap-6">
-          <a href="tel:+11234567890" className="flex items-center gap-2 hover:text-tertiary transition-colors group">
+          <a href="tel:+91 1234567890" className="flex items-center gap-2 hover:text-tertiary transition-colors group">
             <Phone className="w-3 h-3 text-tertiary group-hover:scale-110 transition-transform" />
-            <span className="font-label text-xs tracking-wide text-on-surface-variant group-hover:text-on-surface transition-colors">+1 123 456 7890</span>
+            <span className="font-label text-xs tracking-wide text-on-surface-variant group-hover:text-on-surface transition-colors">+91 1234567890</span>
           </a>
           <a href="mailto:abc@gmail.com" className="flex items-center gap-2 hover:text-tertiary transition-colors group">
             <Mail className="w-3 h-3 text-tertiary group-hover:scale-110 transition-transform" />
@@ -87,9 +87,6 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <button className="hidden md:block px-5 py-2 text-xs font-headline uppercase tracking-widest text-white border border-outline-variant/20 hover:bg-white/5 transition-all duration-300 rounded-md">
-            Login
-          </button>
           <Link href="/#contact-us" className="hidden sm:block px-5 py-2 text-xs font-headline uppercase tracking-widest bg-gradient-to-r from-primary to-primary-dim text-on-primary font-bold hover:scale-[1.02] active:scale-95 transition-all rounded-md">
             Contact Us
           </Link>

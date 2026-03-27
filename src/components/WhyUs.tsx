@@ -5,7 +5,7 @@ export default function WhyUs() {
     <section className="py-24 bg-surface-container-low" id="why-us">
       <div className="max-w-7xl mx-auto px-8">
         <div className="mb-16">
-          <h2 className="font-headline text-4xl md:text-5xl font-bold text-white mb-4">The GeoSpectrum Advantage</h2>
+          <h2 className="font-headline text-4xl md:text-5xl font-bold text-white mb-4">The SGIS Mapping Advantage</h2>
           <p className="font-body text-on-surface-variant text-lg">Why industry leaders trust our geospatial intelligence.</p>
         </div>
         

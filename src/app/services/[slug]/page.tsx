@@ -11,7 +11,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </span>
       <h1 className="font-headline text-5xl font-bold text-white mb-8">{title}</h1>
       <p className="font-body text-on-surface-variant text-lg max-w-3xl leading-relaxed">
-        This is a placeholder page for the {title} service. Detailed information about this specific geospatial solution will be displayed here.
+        Placeholder page for the {title} service.
       </p>
     </div>
   );

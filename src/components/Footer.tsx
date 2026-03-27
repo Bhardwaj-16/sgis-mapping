@@ -26,32 +26,14 @@ export default function Footer() {
           <h4 className="font-headline font-bold text-white text-md mb-6 uppercase tracking-wider">Company</h4>
           <ul className="space-y-3">
             <li><Link href="/about" className="font-body text-sm text-on-surface-variant hover:text-white hover:translate-x-1 transition-transform duration-200 block">About Us</Link></li>
-            <li><Link href="/team" className="font-body text-sm text-on-surface-variant hover:text-white hover:translate-x-1 transition-transform duration-200 block">Our Team</Link></li>
-            <li><Link href="/career" className="font-body text-sm text-on-surface-variant hover:text-white hover:translate-x-1 transition-transform duration-200 block">Career</Link></li>
+            <li><Link href="/why-us" className="font-body text-sm text-on-surface-variant hover:text-white hover:translate-x-1 transition-transform duration-200 block">Why Us</Link></li>
             <li><Link href="/#contact-us" className="font-body text-sm text-on-surface-variant hover:text-white hover:translate-x-1 transition-transform duration-200 block">Contact Us</Link></li>
-          </ul>
-        </div>
-        
-        <div>
-          <h4 className="font-headline font-bold text-white text-md mb-6 uppercase tracking-wider">Legal</h4>
-          <ul className="space-y-3">
-            <li><Link href="/privacy" className="font-body text-sm text-on-surface-variant hover:text-white hover:translate-x-1 transition-transform duration-200 block">Privacy Policy</Link></li>
-            <li><Link href="/terms" className="font-body text-sm text-on-surface-variant hover:text-white hover:translate-x-1 transition-transform duration-200 block">Terms of Service</Link></li>
-            <li><Link href="/compliance" className="font-body text-sm text-on-surface-variant hover:text-white hover:translate-x-1 transition-transform duration-200 block">Compliance</Link></li>
           </ul>
         </div>
       </div>
       
       <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="font-body text-sm text-on-surface-variant">© {new Date().getFullYear()} SGIS Mapping Services. All rights reserved.</p>
-        <div className="flex gap-6">
-          <a href="#" className="text-on-surface-variant hover:text-primary transition-colors">
-            <FaLinkedin className="w-5 h-5" />
-          </a>
-          <a href="#" className="text-on-surface-variant hover:text-primary transition-colors">
-            <FaTwitter className="w-5 h-5" />
-          </a>
-        </div>
       </div>
     </footer>
   );
