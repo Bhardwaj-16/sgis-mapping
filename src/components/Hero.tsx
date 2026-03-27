@@ -1,0 +1,47 @@
+"use client";
+
+import { ArrowRight } from "lucide-react";
+import Link from 'next/link';
+
+export default function Hero() {
+  const vimeoSrc = "https://player.vimeo.com/video/798337817?h=bea8f1edce&background=1&autoplay=1&loop=1&byline=0&title=0&muted=1";
+
+  return (
+    <div className="relative h-screen w-full overflow-hidden bg-surface">
+      <div className="absolute inset-0 z-0">
+        <iframe
+          src={vimeoSrc}
+          className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 opacity-50 pointer-events-none"
+          frameBorder="0"
+          allow="autoplay; fullscreen"
+          title="Background Video"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+      </div>
+
+      <div className="relative z-10 flex h-full flex-col items-start justify-center px-8 max-w-7xl mx-auto w-full pointer-events-none">
+        <div className="max-w-4xl pointer-events-auto">
+          <span className="inline-block px-3 py-1 mb-6 text-[10px] font-label uppercase tracking-[0.3em] bg-primary/10 text-primary border border-primary/20 rounded-sm">
+            Expert Mapping <Solutions></Solutions>
+          </span>
+          <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tighter text-white mb-8">
+            Your Vision, Our <br className="hidden md:block" />
+            <span className="text-gradient">Mapping Expertise</span>
+          </h1>
+          <p className="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed">
+            Precision geospatial solutions from aerial to ground level. We bridge the gap between abstract coordinate systems and real-world strategic decisions.
+          </p>
+          <div className="flex flex-wrap gap-6">
+            <Link href="#services" className="px-10 py-4 bg-gradient-to-r from-primary to-primary-dim text-on-primary font-bold font-headline uppercase tracking-widest rounded-lg flex items-center gap-3 group hover:scale-[1.02] transition-transform">
+              Explore Services
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link href="#portfolio" className="px-10 py-4 border border-outline-variant/30 text-white font-headline uppercase tracking-widest rounded-lg hover:bg-white/5 transition-all">
+              Our Portfolio
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
