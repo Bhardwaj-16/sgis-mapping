@@ -52,11 +52,8 @@ export default function Contact() {
             <div className="space-y-8">
               <div className="flex items-start gap-6">
                 <div className="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0 border border-outline-variant/10">
-                  <MapPin className="w-6 h-6" />
+                  <Headset className="w-6 h-6" />
                 </div>
-              </div>
-              
-              <div className="flex items-start gap-6">
                 <div>
                   <h4 className="font-headline text-white font-bold text-lg">24/7 Strategic Support</h4>
                   <p className="font-body text-on-surface-variant text-sm mt-2 leading-relaxed">
