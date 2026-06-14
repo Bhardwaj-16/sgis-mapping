@@ -8,15 +8,17 @@ export default function Hero() {
     <div className="relative h-screen w-full overflow-hidden bg-surface">
       <div className="absolute inset-0 z-0">
         <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-50"
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-        </video>
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="..."
+      >
+        <source
+          src="https://user-cdn.hackclub-assets.com/019ec58f-da42-72f1-a858-80a1fd4c9302/untitled_design_.mp4__720p_.mp4"
+          type="video/mp4"
+        />
+      </video>
         <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
       </div>
 
