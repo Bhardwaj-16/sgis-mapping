@@ -4,18 +4,19 @@ import { ArrowRight } from "lucide-react";
 import Link from 'next/link';
 
 export default function Hero() {
-  const vimeoSrc = "https://player.vimeo.com/video/798337817?h=bea8f1edce&background=1&autoplay=1&loop=1&byline=0&title=0&muted=1";
-
   return (
     <div className="relative h-screen w-full overflow-hidden bg-surface">
       <div className="absolute inset-0 z-0">
-        <iframe
-          title="player" src="https://player.vimeo.com/video/1201132309?h=9c53900964"
-          className="absolute top-1/2 left-1/2 w-[100vw] h-[55.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 opacity-50 pointer-events-none"
-          frameBorder="0"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-50"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
       </div>
 
