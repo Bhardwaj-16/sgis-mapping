@@ -12,7 +12,7 @@ export default function Hero() {
         muted
         loop
         playsInline
-        className="..."
+        className="bsolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-50"
       >
         <source
           src="https://user-cdn.hackclub-assets.com/019ec58f-da42-72f1-a858-80a1fd4c9302/untitled_design_.mp4__720p_.mp4"
