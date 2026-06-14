@@ -10,7 +10,7 @@ export default function Hero() {
     <div className="relative h-screen w-full overflow-hidden bg-surface">
       <div className="absolute inset-0 z-0">
         <iframe
-          title="player" src="https://player.vimeo.com/video/798337817?h=bea8f1edce"
+          title="player" src="https://vimeo.com/1201132309?h=bea8f1edce&background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
           className="absolute top-1/2 left-1/2 w-[100vw] h-[55.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 opacity-50 pointer-events-none"
           frameBorder="0"
           referrerPolicy="strict-origin-when-cross-origin"
