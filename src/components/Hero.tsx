@@ -39,9 +39,6 @@ export default function Hero() {
               Explore Services
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link href="#portfolio" className="px-10 py-4 border border-outline-variant/30 text-white font-headline uppercase tracking-widest rounded-lg hover:bg-white/5 transition-all">
-              Our Portfolio
-            </Link>
           </div>
         </div>
       </div>
