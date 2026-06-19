@@ -96,10 +96,15 @@ export default function Contact() {
                   name="subject"
                   className="w-full bg-surface-container-highest border border-transparent focus:border-primary/50 focus:ring-1 focus:ring-primary text-white p-4 rounded-lg transition-all outline-none appearance-none"
                 >
-                  <option value="LiDAR & 3D Modeling">LiDAR & 3D Modeling</option>
-                  <option value="Ortho-rectification">Ortho-rectification</option>
-                  <option value="GIS Consulting">GIS Consulting</option>
-                  <option value="Asset Mapping">Asset Mapping</option>
+                  <option value="Service Required">Service Required</option>
+                  <option value="Aerial Triangulation">Aerial Triangulation</option>
+                  <option value="Digital Photogrammetry">Digital Photogrammetry</option>
+                  <option value="Ortho Processing">Ortho Processing</option>
+                  <option value="LiDAR Processing">LiDAR Processing</option>
+                  <option value="3D Modeling">3D Modeling</option>
+                  <option value="GIS Mobile Application">GIS Mobile Application</option>
+                  <option value="Utility Mapping">Utility Mapping</option>
+                  <option value="GIS/CAD Services">GIS/CAD Services</option>
                   <option value="Other">Other</option>
                 </select>
               </div>

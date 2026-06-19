@@ -7,24 +7,14 @@ const services = [
     icon: Globe,
   },
   {
-    title: 'DEM / DTM',
-    description: 'Accurate Digital Elevation and Terrain Models for engineering and analysis.',
-    icon: Mountain,
+    title: 'Digital Photogrammetry',
+    description: 'Extracting 3D features and generating highly precise digital topographic maps.',
+    icon: Globe,
   },
   {
-    title: 'Ortho-rectification',
-    description: 'Image Processing, Mosaicing and Color Balancing for map-accurate visual data.',
-    icon: Layers,
-  },
-  {
-    title: 'Planimetric Collection',
-    description: 'Detailed mapping of man-made and natural features on the earth\'s surface.',
-    icon: Activity,
-  },
-  {
-    title: 'Topography Mapping',
-    description: 'Comprehensive contour and site detail for architectural planning.',
-    icon: Map,
+    title: 'Ortho Processing',
+    description: 'Creation of geometrically correct true orthophotos and ortho-rectified images.',
+    icon: Globe,
   },
   {
     title: 'LiDAR Processing',
@@ -37,29 +27,19 @@ const services = [
     icon: Box,
   },
   {
-    title: 'Remote Sensing',
-    description: 'Satellite data interpretation for environmental and agricultural monitoring.',
-    icon: Satellite,
+    title: 'GIS Mobile Application',
+    description: 'Developing intuitive mobile solutions for remote field operations and data collection.',
+    icon: Box,
+  },
+  {
+    title: 'Utility Mapping',
+    description: 'Accurately identifying and mapping subsurface utilities for safe construction.',
+    icon: Box,
   },
   {
     title: 'GIS/CAD Services',
     description: 'Comprehensive drafting and geographic information system management.',
     icon: Database,
-  },
-  {
-    title: 'Asset Mapping',
-    description: 'Precise location and condition tracking for infrastructure management.',
-    icon: MapPin,
-  },
-  {
-    title: 'Volume Measurements',
-    description: 'Accurate stockpile and earthwork calculations for construction and mining.',
-    icon: Ruler,
-  },
-  {
-    title: 'GIS Consulting',
-    description: 'Strategic guidance on implementing and optimizing geospatial technologies.',
-    icon: Users,
   },
 ];
 

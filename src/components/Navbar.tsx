@@ -5,18 +5,14 @@ import { Phone, Mail, ChevronDown, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 const services = [
-  { name: 'Aerial Triangulation', slug: 'aerial-triangulation' },
-  { name: 'DEM / DTM', slug: 'dem-dtm' },
-  { name: 'Ortho-rectification', slug: 'ortho-rectification' },
-  { name: 'Planimetric Feature Collection', slug: 'planimetric-collection' },
-  { name: 'Topography Mapping', slug: 'topography-mapping' },
-  { name: 'LiDAR Processing', slug: 'lidar-processing' },
-  { name: '3D Modeling', slug: '3d-modeling' },
-  { name: 'Remote Sensing', slug: 'remote-sensing' },
   { name: 'GIS/CAD Services', slug: 'gis-cad-services' },
-  { name: 'Asset Mapping', slug: 'asset-mapping' },
-  { name: 'Volume/Stockpile Measurements', slug: 'volume-measurements' },
-  { name: 'GIS Consulting', slug: 'gis-consulting' },
+  { name: 'LiDAR Processing', slug: 'lidar-processing' },
+  { name: 'Aerial Triangulation', slug: 'aerial-triangulation' },
+  { name: 'Digital Photogrammetry', slug: 'digital-photogrammetry' },
+  { name: 'Ortho Processing', slug: 'ortho-processing' },
+  { name: '3D Modeling', slug: '3d-modeling' },
+  { name: 'Utility Mapping', slug: 'utility-mapping' },
+  { name: 'GIS Mobile Application', slug: 'gis-mobile-applications' },
 ];
 
 export default function Navbar() {
@@ -31,11 +27,11 @@ export default function Navbar() {
         <div className="flex items-center gap-4 md:gap-6">
           <a href="tel:+91 1234567890" className="flex items-center gap-2 hover:text-tertiary transition-colors group">
             <Phone className="w-3 h-3 text-tertiary group-hover:scale-110 transition-transform" />
-            <span className="font-label text-xs tracking-wide text-on-surface-variant group-hover:text-on-surface transition-colors">+91 1234567890</span>
+            <span className="font-label text-xs tracking-wide text-on-surface-variant group-hover:text-on-surface transition-colors">+91 8309601671</span>
           </a>
           <a href="mailto:abc@gmail.com" className="flex items-center gap-2 hover:text-tertiary transition-colors group">
             <Mail className="w-3 h-3 text-tertiary group-hover:scale-110 transition-transform" />
-            <span className="font-label text-xs tracking-wide text-on-surface-variant group-hover:text-on-surface transition-colors">abc@gmail.com</span>
+            <span className="font-label text-xs tracking-wide text-on-surface-variant group-hover:text-on-surface transition-colors"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@sgismapping.com" target="_blank" rel="noopener noreferrer">info@sgismapping.com</a></span>
           </a>
         </div>
         <div className="hidden md:flex items-center gap-4">
@@ -51,6 +47,9 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-10">
+          <Link href="/" className="font-headline tracking-tight text-sm uppercase text-on-surface-variant hover:text-white transition-colors">
+            Home
+          </Link>
           <div
             className="relative group h-full flex items-center"
             onMouseEnter={() => setIsDropdownOpen(true)}
