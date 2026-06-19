@@ -15,10 +15,9 @@ export default function Footer() {
         <div>
           <h4 className="font-headline font-bold text-white text-md mb-6 uppercase tracking-wider">Services</h4>
           <ul className="space-y-3">
-            <li><Link href="/services/photogrammetry" className="font-body text-sm text-on-surface-variant hover:text-white hover:translate-x-1 transition-transform duration-200 block">Photogrammetry</Link></li>
+            <li><Link href="/services/gis-cad-services" className="font-body text-sm text-on-surface-variant hover:text-white hover:translate-x-1 transition-transform duration-200 block">GIS/CAD</Link></li>
             <li><Link href="/services/lidar-processing" className="font-body text-sm text-on-surface-variant hover:text-white hover:translate-x-1 transition-transform duration-200 block">LiDAR Analysis</Link></li>
-            <li><Link href="/services/3d-modeling" className="font-body text-sm text-on-surface-variant hover:text-white hover:translate-x-1 transition-transform duration-200 block">Urban Planning</Link></li>
-            <li><Link href="/services/gis-cad-services" className="font-body text-sm text-on-surface-variant hover:text-white hover:translate-x-1 transition-transform duration-200 block">Data Processing</Link></li>
+            <li><Link href="/services/3d-modeling" className="font-body text-sm text-on-surface-variant hover:text-white hover:translate-x-1 transition-transform duration-200 block">3D Modelling</Link></li>
           </ul>
         </div>
         
