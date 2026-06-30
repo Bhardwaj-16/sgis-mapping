@@ -1,45 +1,54 @@
-import { Globe, Mountain, Layers, Activity, Map, Sun, Box, Satellite, Database, MapPin, Ruler, Users } from 'lucide-react';
+import Link from 'next/link';
+import { Map, Activity, Mountain, Camera, Layers, Box, Ruler, Smartphone } from 'lucide-react';
 
 const services = [
   {
-    title: 'Aerial Triangulation',
-    description: 'Precision control for photogrammetric mapping across vast terrains.',
-    icon: Globe,
-  },
-  {
-    title: 'Digital Photogrammetry',
-    description: 'Extracting 3D features and generating highly precise digital topographic maps.',
-    icon: Globe,
-  },
-  {
-    title: 'Ortho Processing',
-    description: 'Creation of geometrically correct true orthophotos and ortho-rectified images.',
-    icon: Globe,
+    title: 'GIS/CAD Services',
+    slug: 'gis-cad-services',
+    description: 'Comprehensive drafting and geographic information system management.',
+    icon: Map,
   },
   {
     title: 'LiDAR Processing',
+    slug: 'lidar-processing',
     description: 'Advanced point cloud analysis for high-fidelity 3D environments.',
-    icon: Sun,
+    icon: Activity,
+  },
+  {
+    title: 'Aerial Triangulation',
+    slug: 'aerial-triangulation',
+    description: 'Precision control for photogrammetric mapping across vast terrains.',
+    icon: Mountain,
+  },
+  {
+    title: 'Digital Photogrammetry',
+    slug: 'digital-photogrammetry',
+    description: 'Extracting 3D features and generating highly precise digital topographic maps.',
+    icon: Camera,
+  },
+  {
+    title: 'Ortho Processing',
+    slug: 'ortho-processing',
+    description: 'Creation of geometrically correct true orthophotos and ortho-rectified images.',
+    icon: Layers,
   },
   {
     title: '3D Modeling',
+    slug: '3d-modeling',
     description: 'Photorealistic and semantic city modeling for urban simulations.',
     icon: Box,
   },
   {
-    title: 'GIS Mobile Application',
-    description: 'Developing intuitive mobile solutions for remote field operations and data collection.',
-    icon: Box,
-  },
-  {
     title: 'Utility Mapping',
+    slug: 'utility-mapping',
     description: 'Accurately identifying and mapping subsurface utilities for safe construction.',
-    icon: Box,
+    icon: Ruler,
   },
   {
-    title: 'GIS/CAD Services',
-    description: 'Comprehensive drafting and geographic information system management.',
-    icon: Database,
+    title: 'GIS Mobile Application',
+    slug: 'gis-mobile-applications',
+    description: 'Developing intuitive mobile solutions for remote field operations and data collection.',
+    icon: Smartphone,
   },
 ];
 
@@ -63,11 +72,15 @@ export default function Services() {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <div key={index} className="group bg-surface-container-high p-8 hover:bg-surface-bright transition-all duration-300 service-card-border relative overflow-hidden">
+              <Link 
+                key={index} 
+                href={`/services/${service.slug}`}
+                className="group bg-surface-container-high p-8 hover:bg-surface-bright transition-all duration-300 service-card-border relative overflow-hidden block"
+              >
                 <Icon className="text-tertiary mb-6 w-10 h-10 stroke-[1.5]" />
                 <h3 className="font-headline text-xl text-white mb-4 font-semibold">{service.title}</h3>
                 <p className="font-body text-sm text-on-surface-variant leading-relaxed">{service.description}</p>
-              </div>
+              </Link>
             );
           })}
         </div>
