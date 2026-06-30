@@ -6,31 +6,58 @@ import { useState } from 'react';
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
+    setErrorMessage(null);
 
-    const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData.entries());
+    const form = e.currentTarget;
+    const firstName = (form.elements.namedItem('firstName') as HTMLInputElement).value;
+    const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+    const subject = (form.elements.namedItem('subject') as HTMLSelectElement).value;
+    const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value;
+
+    const payload = {
+      firstName,
+      email,
+      subject,
+      message,
+    };
 
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
       });
 
-      if (response.ok) {
+      const data = await response.json();
+      console.log('API response:', data);
+
+      if (data.success) {
         setSubmitStatus('success');
-        (e.target as HTMLFormElement).reset();
+        form.reset();
       } else {
+        console.error('API Error:', data.message, data.errors);
+        
+        // Format validation errors into a single string to display
+        if (data.errors && Object.keys(data.errors).length > 0) {
+          const errorMsg = Object.values(data.errors).join(' ');
+          setErrorMessage(errorMsg);
+        } else {
+          setErrorMessage(data.message || 'Something went wrong.');
+        }
         setSubmitStatus('error');
       }
     } catch (error) {
+      console.error('Submission Error:', error);
+      setErrorMessage('Network error. Please try again.');
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -96,7 +123,7 @@ export default function Contact() {
                   name="subject"
                   className="w-full bg-surface-container-highest border border-transparent focus:border-primary/50 focus:ring-1 focus:ring-primary text-white p-4 rounded-lg transition-all outline-none appearance-none"
                 >
-                  <option value="Service Required">Service Required</option>
+                  <option value="Service Required">--Service Required--</option>
                   <option value="Aerial Triangulation">Aerial Triangulation</option>
                   <option value="Digital Photogrammetry">Digital Photogrammetry</option>
                   <option value="Ortho Processing">Ortho Processing</option>
@@ -132,7 +159,9 @@ export default function Contact() {
                 <p className="text-tertiary text-sm text-center mt-4 font-body">Thank you! Your message has been sent successfully.</p>
               )}
               {submitStatus === 'error' && (
-                <p className="text-red-400 text-sm text-center mt-4 font-body">Something went wrong. Please try again later.</p>
+                <p className="text-red-400 text-sm text-center mt-4 font-body">
+                  {errorMessage || 'Something went wrong. Please try again later.'}
+                </p>
               )}
             </form>
           </div>

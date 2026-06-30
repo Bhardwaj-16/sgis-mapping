@@ -25,13 +25,13 @@ export default function Navbar() {
       {/* Top Bar */}
       <div className="h-10 bg-surface-container-lowest flex items-center justify-between px-4 md:px-8 border-b border-outline-variant/10">
         <div className="flex items-center gap-4 md:gap-6">
-          <a href="tel:+91 1234567890" className="flex items-center gap-2 hover:text-tertiary transition-colors group">
+          <a href="tel:+91 8309601671" className="flex items-center gap-2 hover:text-tertiary transition-colors group">
             <Phone className="w-3 h-3 text-tertiary group-hover:scale-110 transition-transform" />
             <span className="font-label text-xs tracking-wide text-on-surface-variant group-hover:text-on-surface transition-colors">+91 8309601671</span>
           </a>
-          <a href="mailto:abc@gmail.com" className="flex items-center gap-2 hover:text-tertiary transition-colors group">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@sgismapping.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-tertiary transition-colors group">
             <Mail className="w-3 h-3 text-tertiary group-hover:scale-110 transition-transform" />
-            <span className="font-label text-xs tracking-wide text-on-surface-variant group-hover:text-on-surface transition-colors"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@sgismapping.com" target="_blank" rel="noopener noreferrer">info@sgismapping.com</a></span>
+            <span className="font-label text-xs tracking-wide text-on-surface-variant group-hover:text-on-surface transition-colors">info@sgismapping.com</span>
           </a>
         </div>
         <div className="hidden md:flex items-center gap-4">
